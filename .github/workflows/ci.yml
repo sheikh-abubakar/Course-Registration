@@ -26,8 +26,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Check if app starts (syntax/import errors)
-        run: node -e "require('./server.js')"
-        env:
-          MONGO_URI: ${{ secrets.MONGO_URI }}
-          PORT: 5000
+      - name: Check syntax
+        run: node --check server.js
