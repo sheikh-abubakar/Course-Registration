@@ -28,3 +28,6 @@ jobs:
 
       - name: Check syntax
         run: node --check server.js
+      
+      - name: Run tests
+        run: npm test
